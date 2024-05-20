@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #d00f22; /* Vermelho */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.sobre-a-loja {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    background-color: white;
+}
+
+.sobre-imagem, .sobre-texto {
+    flex: 1;
+    padding: 1em;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.produtos {
+    padding: 2em;
+    background-color: #fff;
+}
+
+.produtos h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #28a745; /* Verde */
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    width: calc(25% - 1em);
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.imagem-container {
+    width: 100%;
+    position: relative;
+    padding-top: 100%; /* Proporção 1:1 */
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #ddd; 
+}
+
+.imagem-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobrir o contêiner sem deixar bordas */
+}
+
+.produto h3 {
+    margin: 0.5em 0;
+    color: #28a745; /* Verde */
+}
+
+.produto p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.produto button {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #28a745; /* Verde */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: #218838; /* Verde escuro */
+}
+
+footer {
+    background-color: #d00f22;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+.alerta {
+    color: #d00f22; /* Vermelho */
+    font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Tablet (landscape) */
+@media (max-width: 1024px) {
+    .sobre-a-loja {
+        flex-direction: column;
+    }
+
+    .produto {
+        width: calc(50% - 1em);
+    }
+}
+
+/* Mobile (portrait) */
+@media (max-width: 768px) {
+    .produto {
+        width: 100%;
+    }
+
+    header {
+        font-size: 1.2em; /* Ajusta o tamanho da fonte do cabeçalho em telas menores */
+    }
+
+    .sobre-a-loja {
+        padding: 1em;
+    }
+
+    .produtos {
+        padding: 1em;
+    }
+
+    .produto {
+        margin-bottom: 1.5em;
+    }
+
+    .produto h3 {
+        font-size: 1.1em;
+    }
+
+    .produto p {
+        font-size: 0.9em;
+    }
+
+    .produto button {
+        padding: 0.7em 1.2em;
+    }
+}
